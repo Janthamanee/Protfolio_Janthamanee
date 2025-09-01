@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio — นางสาว จันทมณี สีดาคำ</title>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <meta name="description" content="Portfolio สวยๆ สำหรับส่งอาจารย์ - กรอกข้อมูลของคุณแทนที่ข้อความตัวอย่าง">
+  <style>
+    :root{
+      --bg: #0f1724; /* deep navy */
+      --card: #0b1220;
+      --accent: #7c5cff; /* purple accent */
+      --muted: #94a3b8;
+      --glass: rgba(255,255,255,0.04);
+      --radius: 14px;
+      --max-width: 1100px;
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: 'Inter', system-ui, Roboto, -apple-system, 'Segoe UI', 'Noto Sans', 'Helvetica Neue', Arial;
+      background: linear-gradient(180deg, #071028 0%, #081026 60%);
+      color:#e6eef8;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:40px 20px;
+      display:flex;justify-content:center;
+    }
+    .container{
+      width:100%;max-width:var(--max-width);
+      backdrop-filter: blur(6px);
+    }
+
+    header{
+      display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:28px
+    }
+    .brand{
+      display:flex;align-items:center;gap:12px
+    }
+    .logo{
+      width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#4cc9f0);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:20px;color:#051126;box-shadow:0 6px 18px rgba(124,92,255,0.12)
+    }
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px}
+    nav a:hover{color:var(--accent)}
+
+    .hero{
+      display:grid;grid-template-columns:1fr 380px;gap:28px;align-items:center;margin-bottom:28px
+    }
+    @media (max-width:900px){.hero{grid-template-columns:1fr}}
+
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:var(--radius);padding:22px;box-shadow:0 10px 30px rgba(2,6,23,0.6);
+      border:1px solid rgba(255,255,255,0.03)
+    }
+
+    .intro h1{font-size:32px;margin:0 0 8px 0}
+    .intro p{color:var(--muted);margin:0 0 18px 0;line-height:1.6}
+
+    .cta{display:flex;gap:12px}
+    .btn{background:var(--accent);color:#051126;padding:10px 14px;border-radius:10px;font-weight:600;text-decoration:none}
+    .btn-outline{border:1px solid rgba(255,255,255,0.06);padding:10px 14px;border-radius:10px;color:var(--muted);text-decoration:none}
+
+    .profile-card{display:flex;flex-direction:column;gap:12px;align-items:center;text-align:center}
+    .avatar{width:120px;height:120px;border-radius:18px;background:linear-gradient(180deg,#122033,#0b1526);display:flex;align-items:center;justify-content:center;font-size:44px;font-weight:700;color:var(--accent);border:1px solid rgba(255,255,255,0.03)}
+    .profile-card small{color:var(--muted)}
+
+    /* Sections */
+    section{margin-bottom:22px}
+    .section-title{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+    .section-title h2{margin:0;font-size:18px}
+    .projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    @media (max-width:1000px){.projects-grid{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:600px){.projects-grid{grid-template-columns:1fr}}
+
+    .project{
+      padding:14px;border-radius:12px;background:var(--card);border:1px solid rgba(255,255,255,0.02);min-height:120px;display:flex;flex-direction:column;gap:8px
+    }
+    .project h3{margin:0;font-size:16px}
+    .tags{display:flex;gap:8px;flex-wrap:wrap}
+    .tag{font-size:12px;padding:6px 8px;background:var(--glass);border-radius:999px;color:var(--muted)}
+
+    .about-columns{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    @media (max-width:900px){.about-columns{grid-template-columns:1fr}}
+
+    footer{display:flex;justify-content:space-between;align-items:center;color:var(--muted);padding-top:10px;border-top:1px dashed rgba(255,255,255,0.02)}
+
+    /* small utilities */
+    .muted{color:var(--muted)}
+
+    /* contact form */
+    .form-row{display:flex;gap:10px}
+    .form-row input, textarea, .form-row .field{width:100%;padding:10px;border-radius:10px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:inherit}
+    textarea{min-height:120px;resize:vertical}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">Y</div>
+        <div>
+            <img src="profile.jpg" alt="รูปโปรไฟล์ของฉัน" width="150" height="150" style="border-radius: 50%;">
+
+          <div style="font-weight:700">นางสาว จันทมณี สีดาคำ</div>
+          <div class="muted" style="font-size:13px">ตำแหน่งที่ต้องการ</div>
+        </div>
+      </div>
+      <nav>
+        <!-- ลิงก์ในหน้านี้ (ใช้ #id เพื่อไปยังแต่ละส่วน) -->
+        <a href="#about">เกี่ยวกับ</a>
+        <a href="#projects">ผลงาน</a>
+        <a href="#contact">ติดต่อ</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero">
+        <div class="card intro">
+          <h1>สวัสดีค่ะ หนู นางสาว จันทมณี สีดาคำ</h1>
+          <p>"ชื่อเล่น เค้กนะคะ ถ้าสนใจติดต่องาน หรืออยากให้ทำงาน ติดต่อได้ที่ตามช้องทางที่ทิ้งไว้เลยค่ะ"</p>
+          <div class="cta">
+            <a class="btn" href="#projects">ดูผลงาน</a>
+          </div>
+
+          <!-- Quick facts (แก้ค่าตามจริง) -->
+          <div style="display:flex;gap:12px;margin-top:18px;flex-wrap:wrap">
+            <div class="card" style="padding:8px;display:flex;gap:8px;align-items:center">
+              <div style="font-weight:700">ประสบการณ์</div>
+              <div class="muted">2 ปี</div>
+            </div>
+            <div class="card" style="padding:8px;display:flex;gap:8px;align-items:center">
+              <div style="font-weight:700">ทักษะหลัก</div>
+              <div class="muted">HTML • CSS • JavaScript</div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="card profile-card">
+          <div class="avatar">ชื่อ</div>
+          <div style="font-weight:700">นาวสาว จันทมณี สีดาคำ</div>
+          <small class="muted">ตำแหน่งที่ต้องการ</small>
+          <div style="width:100%;display:flex;gap:8px;justify-content:center;margin-top:8px">
+            <a class="btn-outline" href="#contact">ติดต่อ</a>
+            <a class="btn-outline" href="#projects">ผลงาน</a>
+          </div>
+        </aside>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="card">
+        <div class="section-title">
+          <h2>เกี่ยวกับฉัน</h2>
+          <div class="muted">ประวัติการศึกษาและทักษะ</div>
+        </div>
+        <div class="about-columns">
+          <div>
+            <p class="muted">ชื่อเค้กค่ะ กำลังศึกษาอยู่ที่วิทยาลัยเทคนิคนิคมอุสหกรรมระยองค่ะ เรียนเกี่ยวกับไอที่ สามารถเขียนโค้ดได้นิดหน่อยค่ะ ชื่อชอบการอ่านนิยายกับการแต่งนิยายมากเลยค่ะ แล้วก็ชอบวาดรูดนิดหน่อยค่ะ</p>
+
+            <h3 style="margin-top:12px">ทักษะ</h3>
+            <div class="tags" style="margin-top:8px">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">React</span>
+            </div>
+          </div>
+          <div>
+            <h3>สถิติ / ผลงานเด่น</h3>
+            <ul class="muted">
+              <li>โครงการที่ทำเสร็จแล้ว: 1 โปรเจกต์</li>
+              <li></li>
+              <li>การสือสาร / การเขียนนิยาย</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects">
+        <div class="section-title">
+          <h2>ผลงาน (Projects)</h2>
+          <div class="muted">ตัวอย่างผลงานที่นำเสนอ</div>
+        </div>
+
+        <div class="projects-grid">
+          <!-- ทำสำเนา card นี้ แล้วแก้ข้อมูลเป็นของคุณ -->
+          <article class="project card">
+            <h3>ทำรูปหมู</h3>
+            <p class="muted" style="flex:1">เป็นการดราฟงานตามรูปที่ตัวเองต้องการทำ สามารถทำได้ในแอป Ai หรือ แอป Me,Ae</p>
+            <img src="หมู.png" alt="ภาพผลงานเว็บไซต์" style="width:100%; border-radius: 5px;">
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <div class="tags">
+              </div>
+              <div>
+                
+              </div>
+            </div>
+          </article>
+
+          <article class="project card">
+            <h3>หาพื้นที่</h3>
+            <p class="muted" style="flex:1">เป็นการแก้โค้ดหาพื้นที่ขอสี่เหลี่ยมผื้นผ้า ทำได้ในเว็บโค้ด</p>
+             <img src="หาพื้นที่ (1).png" alt="ภาพผลงานเว็บไซต์" style="width:100%; border-radius: 5px;">
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <div class="tags">
+                <span class="tag">python</span>
+              </div>
+              <div>
+                
+              </div>
+            </div>
+          </article>
+
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="card">
+        <div class="section-title">
+          <h2>ติดต่อ</h2>
+          <div class="muted">เบอร์โทร 0810276022</div>
+        </div>
+
+          <aside class="card">
+            <h3>ข้อมูลติดต่อ</h3>
+            <p class="muted"> 102/11 ม.1 ซ.ชากขามประชา1 ต.บ้านฉาง อ.บ้านฉาง จ.ระยอง 21130 อีเมล: ao4494690@gmail.com<br>โทร: 0810276022<br>
+            ลิงก์: ig.https://www.instagram.com/iapukan_472?igsh=a3hnaTBleGQyaGtk / Facebook.https://www.facebook.com/share/1CWhdDkVbr/
+            </p>
+
+            <div style="margin-top:12px">
+              <h4 style="margin:0">Availability</h4>
+              <p class="muted" style="margin:6px 0 0 0">พร้อมเริ่มงาน: 26/08/2568</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+    </main>
+
+  <script>
+    // อัปเดตปีอัตโนมัติ
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // คุณสามารถเพิ่มโค้ด JavaScript เล็ก ๆ น้อย ๆ เพื่อทำให้หน้าโต้ตอบได้มากขึ้น
+    // เช่น เปิด modal แสดงภาพ โปรเจกต์ หรือเชื่อมกับ API เพื่อส่งฟอร์ม
+  </script>
+</body>
+</html>
